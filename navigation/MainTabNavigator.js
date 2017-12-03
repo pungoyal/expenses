@@ -6,6 +6,7 @@ import { TabNavigator, TabBarBottom } from 'react-navigation';
 import Colors from '../constants/Colors';
 
 import HomeScreen from '../screens/HomeScreen';
+import ExpensesScreen from '../screens/ExpensesScreen';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 
@@ -13,6 +14,9 @@ export default TabNavigator(
   {
     Home: {
       screen: HomeScreen,
+    },
+    Expenses: {
+      screen: ExpensesScreen,
     },
     Links: {
       screen: LinksScreen,
@@ -32,6 +36,9 @@ export default TabNavigator(
               Platform.OS === 'ios'
                 ? `ios-information-circle${focused ? '' : '-outline'}`
                 : 'md-information-circle';
+            break;
+          case 'Expenses':
+            iconName = Platform.OS === 'ios' ? `ios-cash${focused ? '' : '-outline'}` : 'md-cash';
             break;
           case 'Links':
             iconName = Platform.OS === 'ios' ? `ios-link${focused ? '' : '-outline'}` : 'md-link';
