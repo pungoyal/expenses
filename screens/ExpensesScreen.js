@@ -41,6 +41,7 @@ export default class ExpensesScreen extends Component {
           }
           // ... You can check the source to find the other keys.
         }}
+        showIcon={false}
         onDateChange={(date) => {this.setState({date: date})}}
       />
     </View>
